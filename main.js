@@ -24,6 +24,27 @@ function randomNumber(limit) {
 const digits = Array.from({ length: 50 }, () => [
   randomNumber(4),
   randomNumber(4)
+]).concat([
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1],
+  [1, 1]
 ]);
 
 // Pass the digits array into generateHTML()
