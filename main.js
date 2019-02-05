@@ -52,3 +52,24 @@ const html = digits.map(generateHTML).join("");
 
 // Set the result as the HTML of the gallery
 gallery.innerHTML = html;
+
+// Overlay
+const items = document.querySelectorAll(".item");
+
+items.forEach(item => item.addEventListener("click", handleClick));
+
+function handleClick(e) {
+  const src = e.currentTarget.querySelector("img").src;
+  overlayImage.src = src;
+  open();
+}
+
+function open() {
+  overlay.classList.add("open");
+}
+
+function close() {
+  overlay.classList.remove("open");
+}
+
+overlayCloseBtn.addEventListener("click", close);

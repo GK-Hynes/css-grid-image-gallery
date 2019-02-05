@@ -23,8 +23,9 @@ p {
 
 .close {
   background: none;
-  color: white;
+  color: #000;
   border: 0;
+  cursor: pointer;
 }
 
 .gallery {
@@ -57,7 +58,7 @@ p {
   display: grid;
   justify-content: center;
   align-items: center;
-  transition: 0.4s;
+  transition: 0.5s;
   transform: translateY(100%);
 }
 
@@ -68,6 +69,10 @@ p {
   text-transform: uppercase;
   background: rgba(0, 0, 0, 0.2);
   padding: 10px;
+}
+
+.item__overlay button:hover {
+  cursor: pointer;
 }
 
 .item:hover .item__overlay {
@@ -111,14 +116,16 @@ p {
 
 .overlay.open {
   display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
-.overlay figure {
+.overlay-inner {
   background: white;
   width: 700px;
   padding: 20px;
 }
 
-.overlay img {
+.overlay-inner img {
   width: 100%;
 }
